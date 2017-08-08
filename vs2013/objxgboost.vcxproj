@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EEBF9511-F25D-3A71-8A83-8E9D14099F8D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>objxgboost</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">objxgboost.dir\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">objxgboost.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">objxgboost</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\xgboost\include;D:\xgboost\dmlc-core\include;D:\xgboost\rabit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\xgboost\include;D:\xgboost\dmlc-core\include;D:\xgboost\rabit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\xgboost\include;D:\xgboost\dmlc-core\include;D:\xgboost\rabit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\xgboost\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/xgboost/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\CMake\bin\cmake.exe -HD:/xgboost -BD:/xgboost/vs2013 --check-stamp-file D:/xgboost/vs2013/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/xgboost/CMakeLists.txt;D:\xgboost\CMakeLists.txt;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineSystem.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeSystem.cmake.in;D:\xgboost\vs2013\CMakeFiles\3.9.0\CMakeSystem.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompilerId.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCompilerIdDetection.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\TI-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\CMake\share\cmake-3.9\Modules\CompilerId\VS-10.vcxproj.in;D:\CMake\share\cmake-3.9\Modules\CMakeFindBinUtils.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCCompiler.cmake.in;D:\xgboost\vs2013\CMakeFiles\3.9.0\CMakeCCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCXXCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Platform\Windows-Determine-CXX.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompilerId.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCompilerIdDetection.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\TI-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\CMake\share\cmake-3.9\Modules\CompilerId\VS-10.vcxproj.in;D:\CMake\share\cmake-3.9\Modules\CMakeFindBinUtils.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCXXCompiler.cmake.in;D:\xgboost\vs2013\CMakeFiles\3.9.0\CMakeCXXCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineRCCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeRCCompiler.cmake.in;D:\xgboost\vs2013\CMakeFiles\3.9.0\CMakeRCCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeTestRCCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeTestCCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeTestCompilerCommon.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompilerABI.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeParseImplicitLinkInfo.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCCompilerABI.c;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompileFeatures.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCCompiler.cmake.in;D:\xgboost\vs2013\CMakeFiles\3.9.0\CMakeCCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeTestCXXCompiler.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeTestCompilerCommon.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompilerABI.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeParseImplicitLinkInfo.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeCXXCompilerABI.cpp;D:\CMake\share\cmake-3.9\Modules\CMakeDetermineCompileFeatures.cmake;D:\CMake\share\cmake-3.9\Modules\Internal\FeatureTesting.cmake;D:\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\xgboost\vs2013\CMakeFiles\feature_tests.cxx;D:\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\xgboost\vs2013\CMakeFiles\feature_tests.cxx;D:\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\xgboost\vs2013\CMakeFiles\feature_tests.cxx;D:\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\xgboost\vs2013\CMakeFiles\feature_tests.cxx;D:\CMake\share\cmake-3.9\Modules\CMakeCXXCompiler.cmake.in;D:\xgboost\vs2013\CMakeFiles\3.9.0\CMakeCXXCompiler.cmake;D:\xgboost\cmake\Utils.cmake;D:\CMake\share\cmake-3.9\Modules\FindOpenMP.cmake;D:\CMake\share\cmake-3.9\Modules\CMakeParseImplicitLinkInfo.cmake;D:\xgboost\vs2013\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\xgboost\vs2013\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\xgboost\vs2013\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\xgboost\vs2013\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;D:\xgboost\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\xgboost\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\xgboost\src\c_api\c_api.cc"  />
+    <ClCompile Include="D:\xgboost\src\c_api\c_api_error.cc"  />
+    <ClCompile Include="D:\xgboost\src\common\common.cc"  />
+    <ClCompile Include="D:\xgboost\src\common\hist_util.cc"  />
+    <ClCompile Include="D:\xgboost\src\data\data.cc"  />
+    <ClCompile Include="D:\xgboost\src\data\simple_csr_source.cc"  />
+    <ClCompile Include="D:\xgboost\src\data\simple_dmatrix.cc"  />
+    <ClCompile Include="D:\xgboost\src\data\sparse_page_dmatrix.cc"  />
+    <ClCompile Include="D:\xgboost\src\data\sparse_page_raw_format.cc"  />
+    <ClCompile Include="D:\xgboost\src\data\sparse_page_source.cc"  />
+    <ClCompile Include="D:\xgboost\src\data\sparse_page_writer.cc"  />
+    <ClCompile Include="D:\xgboost\src\gbm\gblinear.cc"  />
+    <ClCompile Include="D:\xgboost\src\gbm\gbm.cc"  />
+    <ClCompile Include="D:\xgboost\src\gbm\gbtree.cc"  />
+    <ClCompile Include="D:\xgboost\src\learner.cc"  />
+    <ClCompile Include="D:\xgboost\src\logging.cc"  />
+    <ClCompile Include="D:\xgboost\src\metric\elementwise_metric.cc"  />
+    <ClCompile Include="D:\xgboost\src\metric\metric.cc"  />
+    <ClCompile Include="D:\xgboost\src\metric\multiclass_metric.cc"  />
+    <ClCompile Include="D:\xgboost\src\metric\rank_metric.cc"  />
+    <ClCompile Include="D:\xgboost\src\objective\multiclass_obj.cc"  />
+    <ClCompile Include="D:\xgboost\src\objective\objective.cc"  />
+    <ClCompile Include="D:\xgboost\src\objective\rank_obj.cc"  />
+    <ClCompile Include="D:\xgboost\src\objective\regression_obj.cc"  />
+    <ClCompile Include="D:\xgboost\src\predictor\cpu_predictor.cc"  />
+    <ClCompile Include="D:\xgboost\src\predictor\predictor.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\tree_model.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\tree_updater.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\updater_colmaker.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\updater_fast_hist.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\updater_histmaker.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\updater_prune.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\updater_refresh.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\updater_skmaker.cc"  />
+    <ClCompile Include="D:\xgboost\src\tree\updater_sync.cc"  />
+    <ClInclude Include="D:\xgboost\src\c_api\c_api_error.h" />
+    <ClInclude Include="D:\xgboost\src\common\base64.h" />
+    <ClInclude Include="D:\xgboost\src\common\bitmap.h" />
+    <ClInclude Include="D:\xgboost\src\common\column_matrix.h" />
+    <ClInclude Include="D:\xgboost\src\common\common.h" />
+    <ClInclude Include="D:\xgboost\src\common\compressed_iterator.h" />
+    <ClInclude Include="D:\xgboost\src\common\config.h" />
+    <ClInclude Include="D:\xgboost\src\common\group_data.h" />
+    <ClInclude Include="D:\xgboost\src\common\hist_util.h" />
+    <ClInclude Include="D:\xgboost\src\common\io.h" />
+    <ClInclude Include="D:\xgboost\src\common\math.h" />
+    <ClInclude Include="D:\xgboost\src\common\quantile.h" />
+    <ClInclude Include="D:\xgboost\src\common\random.h" />
+    <ClInclude Include="D:\xgboost\src\common\row_set.h" />
+    <ClInclude Include="D:\xgboost\src\common\sync.h" />
+    <ClInclude Include="D:\xgboost\src\data\simple_csr_source.h" />
+    <ClInclude Include="D:\xgboost\src\data\simple_dmatrix.h" />
+    <ClInclude Include="D:\xgboost\src\data\sparse_batch_page.h" />
+    <ClInclude Include="D:\xgboost\src\data\sparse_page_dmatrix.h" />
+    <ClInclude Include="D:\xgboost\src\data\sparse_page_source.h" />
+    <ClInclude Include="D:\xgboost\src\gbm\gbtree_model.h" />
+    <ClInclude Include="D:\xgboost\src\tree\fast_hist_param.h" />
+    <ClInclude Include="D:\xgboost\src\tree\param.h" />
+    <ClInclude Include="D:\xgboost\src\tree\updater_basemaker-inl.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\base.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\c_api.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\data.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\feature_map.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\gbm.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\learner.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\logging.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\metric.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\objective.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\predictor.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\tree_model.h" />
+    <ClInclude Include="D:\xgboost\include\xgboost\tree_updater.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\xgboost\vs2013\ZERO_CHECK.vcxproj">
+      <Project>{39F1B6B1-26B6-3AA5-AA93-FA362566DD0B}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

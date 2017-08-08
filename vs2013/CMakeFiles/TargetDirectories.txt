@@ -1,0 +1,9 @@
+D:/xgboost/vs2013/CMakeFiles/xgboost.dir
+D:/xgboost/vs2013/CMakeFiles/runxgboost.dir
+D:/xgboost/vs2013/CMakeFiles/rabit.dir
+D:/xgboost/vs2013/CMakeFiles/objxgboost.dir
+D:/xgboost/vs2013/CMakeFiles/ALL_BUILD.dir
+D:/xgboost/vs2013/CMakeFiles/ZERO_CHECK.dir
+D:/xgboost/vs2013/dmlc-core/CMakeFiles/dmlccore.dir
+D:/xgboost/vs2013/dmlc-core/CMakeFiles/dmlccore_lint.dir
+D:/xgboost/vs2013/dmlc-core/CMakeFiles/ALL_BUILD.dir
